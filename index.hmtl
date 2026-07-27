@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Data Portfolio | Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://fontawesome.com" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Ashritha Data Portfolio</h1>
+            <p class="subtitle">Data Analyst | Translating Complex Data into Actionable Business Insights</p>
+            <div class="contact-links">
+                <a href="mailto:your.ashrithanaik05@email.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/ashrithanaik" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Technical Skills Section -->
+    <section class="skills container">
+        <h2>Technical Stack</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><h3>Languages</h3><p>SQL (PostgreSQL, MySQL), Python (Pandas, NumPy), R</p></div>
+            <div class="skill-card"><h3>Visualization</h3><p>Power BI, Tableau, Matplotlib, Seaborn</p></div>
+            <div class="skill-card"><h3>Tools & Platforms</h3><p>Excel (Advanced), Git/GitHub, AWS (S3, Athena), Snowflake</p></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Projects Section -->
+    <section class="projects container">
+        <h2>Featured Analytics Projects</h2>
+        <div class="project-grid">
+
+            <!-- Project 1: SQL + Dashboard -->
+            <div class="project-card">
+                <div class="project-tags"><span>SQL</span><span>Power BI</span></div>
+                <h3>E-Commerce Sales Performance Optimization</h3>
+                <p class="project-desc">Analyzed 50k+ transactions to evaluate regional revenue trends and item profitability performance benchmarks.</p>
+                <ul>
+                    <li><strong>Action:</strong> Engineered multi-table SQL joins and window functions to uncover key churn segments.</li>
+                    <li><strong>Impact:</strong> Designed a dynamic dashboard that identified a 14% waste leak in supply logistics.</li>
+                </ul>
+            </div>
+
+            <!-- Project 2: Python Data Cleaning & Analysis -->
+            <div class="project-card">
+                <div class="project-tags"><span>Python</span><span>Pandas</span></div>
+                <h3>Customer Churn & Segmentation Modeling</h3>
+                <p class="project-desc">Processed and cleaned unstructured SaaS consumer telemetry records to execute algorithmic user grouping.</p>
+                <ul>
+                    <li><strong>Action:</strong> Built automated ETL pipelines in Pandas to resolve missing variables and outliers.</li>
+                    <li><strong>Impact:</strong> Executed RFM analysis separating 5 distinct user cohorts to power target marketing campaigns.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience / Education Snapshot -->
+    <section class="resume-summary container">
+        <div class="resume-col">
+            <h2>Education</h2>
+            <div class="resume-item">
+                <h4>Vellore Institute of Technology | Integrated M.Tech, CSE</h4>
+                <p class="date">2023 - Present</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ashritha Data Portfolio. Built with clean HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
