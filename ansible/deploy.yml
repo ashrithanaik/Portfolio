@@ -1,0 +1,44 @@
+
+---
+- name: Configure and deploy portfolio website
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Install NGINX
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Copy portfolio HTML
+      ansible.builtin.copy:
+        src: ../index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: "0644"
+      notify: Reload NGINX
+
+    - name: Copy portfolio CSS
+      ansible.builtin.copy:
+        src: ../style.css
+        dest: /var/www/html/style.css
+        owner: www-data
+        group: www-data
+        mode: "0644"
+      notify: Reload NGINX
+
+    - name: Ensure NGINX is running and enabled
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+  handlers:
+    - name: Reload NGINX
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
+
