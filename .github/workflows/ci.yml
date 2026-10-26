@@ -1,0 +1,30 @@
+
+name: Portfolio CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate Docker build
+        run: docker build -t portfolio:ci .
+
+      - name: Check Ansible playbook syntax
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+          ansible-playbook \
+            -i ansible/inventory.ini \
+            ansible/deploy.yml \
+            --syntax-check
